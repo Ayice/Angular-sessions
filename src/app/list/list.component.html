@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let item of list" id="{{ item.id }}">
+    <button (click)="onClickMe(item.id)"></button>
+    {{ item.name }}
+  </li>
+
+  {{
+    clickMessage
+  }}
+</ul>

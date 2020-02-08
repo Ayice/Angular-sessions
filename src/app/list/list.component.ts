@@ -28,6 +28,7 @@ export class ListComponent implements OnInit {
   onAddList() {
     if (this.newItem.length > 0) {
       this.list.push({ name: this.newItem, id: this.list.length + 1 });
+      this.newItem = '';
       return;
     }
     alert('You need to enter a new item');

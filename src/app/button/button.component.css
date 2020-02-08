@@ -1,0 +1,11 @@
+button {
+  padding: 0.5em;
+  box-shadow: 4px 3px 5px 1px #999, 4px 3px 5px 1px #0f0f0f;
+  margin-right: 3%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  box-shadow: inset 4px 3px 5px 1px #999, inset 4px 3px 5px 1px #0f0f0f;
+}

@@ -1,10 +1,11 @@
 <ul>
   <li *ngFor="let item of list" id="{{ item.id }}">
-    <button (click)="onClickMe(item.id)"></button>
+    <app-button msg="Delete" (click)="onClickMe(item.id)"></app-button>
     {{ item.name }}
   </li>
-
-  {{
-    clickMessage
-  }}
 </ul>
+
+<div>
+  <input type="text" [(ngModel)]="newItem" class="form-control" />
+  <app-button msg="Add item" (click)="onAddList(newItem)"></app-button>
+</div>

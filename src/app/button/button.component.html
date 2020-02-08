@@ -1,1 +1,3 @@
-<span>X</span>
+<button [ngClass]="{ 'btn-success mt-3': msg === 'Add item', 'btn-danger': msg === 'Delete' }" class="btn ">
+  {{ msg }}
+</button>

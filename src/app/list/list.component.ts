@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  clickMessage: any;
+  newItem = '';
+  msg = '';
   list: Array<any> = [
     {
       id: 1,
@@ -17,10 +18,19 @@ export class ListComponent implements OnInit {
       name: 'Hero 2'
     }
   ];
+
   onClickMe(e) {
     const target = this.list.find(x => x.id === e);
     const deleteMe = this.list.indexOf(target);
     this.list.splice(deleteMe, 1);
+  }
+
+  onAddList() {
+    if (this.newItem.length > 0) {
+      this.list.push({ name: this.newItem, id: this.list.length + 1 });
+      return;
+    }
+    alert('You need to enter a new item');
   }
 
   constructor() {}

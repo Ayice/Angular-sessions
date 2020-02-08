@@ -1,0 +1,31 @@
+nav {
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ebebeb;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 2em;
+}
+
+nav ul li a {
+  transition: all 0.3s ease-in;
+  color: #333;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #999;
+}
